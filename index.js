@@ -85,6 +85,7 @@ app.use("/", authRouter);
 /**
  * Routes Definitions
  */
+//create secured var for routes
  const secured = (req, res, next) => {
   if (req.user) {
     return next();
@@ -92,11 +93,11 @@ app.use("/", authRouter);
   req.session.returnTo = req.originalUrl;
   res.redirect("/login");
 };
-
+//home
  app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
-
+//user
 app.get("/user", secured, (req, res, next) => {
   const { _raw, _json, ...userProfile } = req.user;
   res.render("user", {
