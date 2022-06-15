@@ -1,0 +1,36 @@
+{
+  "name": "taskmanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "balanced-match": "^1.0.2",
+    "brace-expansion": "^1.1.11",
+    "commander": "^2.15.1",
+    "concat-map": "^0.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.18.1",
+    "minimatch": "^3.0.4",
+    "minimist": "^0.0.8",
+    "mkdirp": "^0.5.1",
+    "sorted-object": "^2.0.1"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "DEBUG=crud:* npm run devstart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianamos93/taskmanager.git"
+  },
+  "author": "Brian Amos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brianamos93/taskmanager/issues"
+  },
+  "homepage": "https://github.com/brianamos93/taskmanager#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
